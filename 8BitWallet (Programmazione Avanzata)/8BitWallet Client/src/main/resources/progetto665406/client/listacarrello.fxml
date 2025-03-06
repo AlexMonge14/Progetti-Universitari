@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" spacing="20.0" style="-fx-background-color: #f0f4f8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progetto665406.client.CarrelloController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="600.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15; -fx-border-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 5);">
+         <children>
+            <ImageView fitHeight="192.0" fitWidth="191.0" layoutX="95.0" layoutY="-1.0" onMouseClicked="#switchToHomePage" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@img/8BitWallet%20Logo.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="t2" layoutX="454.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test2">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="316.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo Attuale:">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Text>
+            <TableView fx:id="dealsTable" layoutX="43.0" layoutY="166.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="176.0" prefWidth="514.0" stylesheets="@TabStyle.css">
+                <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+                               
+               <contextMenu>
+                  <ContextMenu>
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#RimuoviCarrello" text="Rimuovi dal Carrello" />
+                        <MenuItem mnemonicParsing="false" onAction="#popUpStore" text="Osserva Store" />
+                        <MenuItem mnemonicParsing="false" onAction="#popUpGame" text="Osserva Gioco" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+            <Text layoutX="164.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totale:" wrappingWidth="65.3076171875">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="t3" layoutX="238.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test3">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Text>
+            <Button alignment="CENTER" layoutX="331.0" layoutY="367.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#simulaAcquisto" prefHeight="41.0" prefWidth="108.0" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-border-radius: 20; -fx-background-radius: 20; -fx-font-size: 14px;" text="Simula">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fx:id="t1" fill="#80634e" layoutX="315.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test1">
+               <font>
+                  <Font name="Arial Bold Italic" size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

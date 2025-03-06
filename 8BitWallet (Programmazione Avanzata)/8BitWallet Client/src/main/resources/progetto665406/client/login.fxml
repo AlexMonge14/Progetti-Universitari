@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" spacing="20.0" style="-fx-background-color: #f0f4f8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progetto665406.client.LoginController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="480.0" prefWidth="640.0" spacing="30.0">
+         <children>
+            <!-- Primo container -->
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-radius: 15; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 5);">
+               <children>
+                  <ImageView fitHeight="223.0" fitWidth="227.0" layoutX="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/8BitWallet%20Logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="69.0" layoutY="198.0" prefHeight="50.0" prefWidth="148.0" style="-fx-text-fill: #333333;" text="Popola Database">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="carica" alignment="CENTER" layoutX="84.0" layoutY="255.0" onAction="#popolaDatabase" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-border-radius: 20; -fx-background-radius: 20; -fx-font-size: 14px;" text="Carica Dati">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <ProgressIndicator fx:id="pi" layoutX="63.0" layoutY="334.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="160.0" progress="1.0">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ProgressIndicator>
+               </children>
+            </AnchorPane>
+            
+            <!-- Secondo container con TabPane -->
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #b8937d; -fx-border-radius: 15; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 5);" stylesheets="@TabStyle.css">
+               <children>
+                  <TabPane layoutX="7.0" layoutY="14.0" prefHeight="424.0" prefWidth="272.0" style="-fx-border-color: transparent; -fx-tab-min-height: 40; -fx-tab-max-height: 40; -fx-tab-text-color: white; -fx-border-radius: 15 15 0 0; -fx-background-radius: 15 15 0 0;" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="Login">
+                           <content>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="271.0">
+                                 <children>
+                                    <Label layoutX="100.0" layoutY="58.0" text="Username" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font></Label>
+                                    <TextField fx:id="usrlogin" layoutX="36.0" layoutY="98.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="8-16 caratteri alfanumerici" style="-fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                                    <Label layoutX="101.0" layoutY="164.0" text="Password" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font></Label>
+                                    <PasswordField fx:id="pswlogin" layoutX="36.0" layoutY="205.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="6-10 caratteri alfanumerici" style="-fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                                    <Button fx:id="login" layoutX="86.0" layoutY="280.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLogin" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-border-radius: 20; -fx-background-radius: 20; -fx-font-size: 14px;" text="Login">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Registrazione">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                    <Button fx:id="reg" layoutX="86.0" layoutY="319.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleRegistrazione" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-border-radius: 20; -fx-background-radius: 20; -fx-font-size: 14px;" text="Registrati">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label layoutX="101.0" layoutY="241.0" text="Password" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="usrreg" layoutX="37.0" layoutY="198.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="8-16 caratteri alfanumerici" style="-fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                                    <Label layoutX="100.0" layoutY="170.0" text="Username" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="116.0" layoutY="25.0" text="Nome" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="nom" layoutX="36.0" layoutY="54.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Prima lettera maiuscola" style="-fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                                    <TextField fx:id="cog" layoutX="37.0" layoutY="126.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="Prima lettera maiuscola" style="-fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                                    <Label layoutX="102.0" layoutY="97.0" text="Cognome" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <PasswordField fx:id="pswreg" layoutX="36.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="6-10 caratteri alfanumerici" style="-fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
