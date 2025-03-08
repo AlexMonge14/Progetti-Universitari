@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: rgb(74, 74, 197);
+    align-self: center;
+}
+
+option {
+    text-align: center;
+}
+
+#container {
+    background-color: rgb(222, 235, 247);
+    border: 2pt solid rgb(74, 74, 197);
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    max-height: 530px;
+}
+
+fieldset {
+    border: 0pt;
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.colonna {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+#matricole {
+    height: 200px;
+    width: 300px;
+    border: 2pt solid rgb(74, 74, 197);
+}
+
+label {
+    color: rgb(74, 74, 197);
+    font-size: 20px;
+}
+
+.button {
+    width: 150px;
+    height: 40px;
+    border: 2pt solid rgb(74, 74, 197);
+    font-size: 16px;
+    background-color: white;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(217, 223, 230);
+}
+
+#apri {
+    background-color: transparent;
+    border: 0;
+    font-size: 11pt;
+    text-decoration: underline;
+    color: rgb(74, 74, 197);
+}
+
+#apri:hover {
+    cursor: pointer;
+}
+
+#dx {
+    gap: 20px;
+}
+
+.data {
+    border: 2pt solid rgb(74, 74, 197);
+    width: 150px;
+    height: 30px;
+}
+
+#datalaurea, #crea{
+    margin-top: 33px;
+}
+
+#mostrascritta {
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#loadinginvio {
+    color: red;
+    font-size: 16pt;
+    align-self: center;
+    max-width: 100%;
+    margin: 0;
+}
